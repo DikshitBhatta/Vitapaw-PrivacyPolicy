@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Delete Your VitaPaw Account</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,follow" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f5f7fb; --card:#ffffff; --text:#1f2937; --muted:#6b7280;
+      --border:#e5e7eb; --brand:#0b57d0; --shadow:0 10px 30px rgba(17,24,39,0.08);
+      --radius:14px; --max:820px;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{ --bg:#0b0f14; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --border:#1f2937; --brand:#69a1ff; --shadow:0 10px 30px rgba(0,0,0,.4); }
+    }
+    *{box-sizing:border-box}
+    body{margin:0; font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; background:var(--bg); color:var(--text); line-height:1.7;}
+    .wrap{max-width:var(--max); margin:64px auto; padding:0 20px;}
+    .card{background:var(--card); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); padding:28px;}
+    h1{margin:0 0 6px 0; font-size:clamp(24px,3.2vw,34px); letter-spacing:-.02em;}
+    .muted{color:var(--muted);}
+    h2{margin:26px 0 8px; font-size:20px; border-top:2px solid var(--border); padding-top:10px;}
+    ul{margin:8px 0 16px 22px}
+    a{color:var(--brand); text-decoration:none} a:hover{text-decoration:underline}
+    .cta{display:inline-block; background:var(--brand); color:#fff; padding:10px 14px; border-radius:10px; text-decoration:none; margin-top:10px}
+    .note{border:1px dashed var(--border); padding:12px; border-radius:10px; background:rgba(11,87,208,.04);}
+    footer{margin-top:22px; font-size:14px; color:var(--muted);}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card" aria-labelledby="title">
+      <h1 id="title">Delete Your Account</h1>
+      <p class="muted">We’re sorry to see you go. This page explains how to permanently delete your VitaPaw account and all associated data.</p>
+
+      <h2 id="how-to-request">How to request deletion</h2>
+      <p>Email us from the email address associated with your VitaPaw account and include the phrase <em>“Delete My VitaPaw Account”</em> in the subject line.</p>
+      <p><strong>Send to:</strong> <a class="cta" href="mailto:Yummin.shin@gmail.com?subject=Delete%20My%20VitaPaw%20Account&body=Please%20delete%20my%20VitaPaw%20account%20and%20all%20associated%20data.%20My%20account%20email%20is:%20">Yummin.shin@gmail.com</a></p>
+      <p class="note"><strong>Tip:</strong> If you’re emailing from a different address, please state the account email clearly so we can verify ownership.</p>
+
+      <h2 id="what-deletes">What will be deleted?</h2>
+      <ul>
+        <li>Your account details (name, email, city, date of birth, profile image).</li>
+        <li>Authentication credentials (password is hashed; credentials removed).</li>
+        <li>All pet profiles and pet health data (breed, DOB, weight, allergies, health goals/conditions, poop status, neutered status, activity/body condition, favorites, medical records).</li>
+        <li>AI meal generations, edits, and selections tied to your account.</li>
+        <li>Subscription records and delivery history (addresses, statuses).</li>
+        <li>Notification tokens associated with your devices.</li>
+        <li>Any other data linked to your user ID stored by VitaPaw.</li>
+      </ul>
+
+      <h2 id="retention">Data retention</h2>
+      <p>After your request is confirmed, your data will be deleted from our servers within <strong>7 business days</strong>. Any backups containing your data will also be purged during this period.</p>
+
+      <h2 id="need-help">Need help?</h2>
+      <p>If you have questions about your data or this process, contact us at <a href="mailto:Yummin.shin@gmail.com">Yummin.shin@gmail.com</a>. You can also review our <a href="privacy.html">Privacy Policy</a> for more details on how we handle your information.</p>
+
+      <footer>© 2025 VitaPaw. All rights reserved.</footer>
+    </section>
+  </main>
+</body>
+</html>
