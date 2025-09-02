@@ -106,7 +106,7 @@
           <div class="support-ico">✉️</div>
           <div class="support-title">Contact us</div>
           <div class="support-desc">Send your request to our friendly team</div>
-          <div style="margin-top:10px;font-weight:600"><a href="mailto:info@vitapaw.com">info@vitapaw.com</a></div>
+          <div style="margin-top:10px;font-weight:600"><a href="mailto:dikshitbhatta2060@gmail.com">dikshitbhatta2060@gmail.com</a></div>
         </div>
         <div class="card support-card">
           <div class="support-ico">📍</div>
@@ -159,7 +159,7 @@
         <ul>
           <li>📍 Bangkok, Thailand</li>
           <li>📞 096-932-8856</li>
-          <li>✉️ <a href="mailto:info@vitapaw.com">info@vitapaw.com</a></li>
+          <li>✉️ <a href="mailto:dikshitbhatta2060@gmail.com">dikshitbhatta2060@gmail.com</a></li>
         </ul>
       </div>
     </div>
@@ -174,7 +174,7 @@
     const successMsg = document.getElementById('success');
     const errorMsg = document.getElementById('error');
 
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', async function(e) {
       e.preventDefault();
       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailPattern.test(emailField.value)) {
@@ -183,8 +183,27 @@
         return;
       }
       errorMsg.style.display = 'none';
-      successMsg.style.display = 'block';
-      form.reset();
+
+      const data = new FormData(form);
+      data.append('_subject', 'Vitapaw Support Message');
+
+      try {
+        const res = await fetch('https://formspree.io/f/xvgbwpzo', {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          successMsg.style.display = 'block';
+          form.reset();
+        } else {
+          errorMsg.textContent = '❌ Something went wrong. Please try again.';
+          errorMsg.style.display = 'block';
+        }
+      } catch (err) {
+        errorMsg.textContent = '❌ Network error. Please try again.';
+        errorMsg.style.display = 'block';
+      }
     });
 
     document.getElementById('year').textContent = new Date().getFullYear();
